@@ -1,1 +1,4 @@
-# tweet-analyse
+# R çalışmalarım
+- Tweet Analizi
+
+Çalışmalarımı yüklemeye devam edeceğim.
