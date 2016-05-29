@@ -39,9 +39,10 @@ tweets.text <- gsub(" $", "", tweets.text)
 corpus <- Corpus(VectorSource(tweets.text))
 #stopwrods from text file
 #stopwords_tr <- readLines("turkce_stopwords.txt",encoding="UTF-8")
-mystopwords <- c('dedi','ile','bunu','buna','gibi','bir','hem','her','...','to','ve','for','hiç','yok','the','var','ama','yeni','eski','biz','gün','son','ilk','and','one','için','çok','iyi','are','için','kişi','ben','antalya','izmir','travel')
-# mystopwords <- c(stopwords_tr)
-corpus1 <- tm_map(corpus,removeWords,mystopwords)
+#mystopwords <- c('dedi','ile','bunu','buna','gibi','bir','hem','her','...','to','ve','for','hiç','yok','the','var','ama','yeni','eski','biz','gün','son','ilk','and','one','için','çok','iyi','are','için','kişi','ben','antalya','izmir','travel')
+
+corpus1 <- tm_map(corpus,removeWords,c(stopwords("English"),"this","will","de","en","la","via"))
+
 
 r_stats_text=tweets.text
 
