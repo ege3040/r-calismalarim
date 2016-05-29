@@ -11,7 +11,7 @@ access_secret="XXXXXXXXXXXX"
 setup_twitter_oauth(consumerKey,consumerSecret,access_token,access_secret)
 
 
-r_stats<- searchTwitter("#ankara",n=1500,since = "2016-02-15")
+r_stats<- searchTwitter("#spacex",n=1500,since = "2009-01-01")
 
 r_stats_text <- sapply(r_stats, function(x) x$getText())
 tweets.text=unique(r_stats_text)
